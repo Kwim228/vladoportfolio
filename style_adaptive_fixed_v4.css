@@ -1,0 +1,768 @@
+/* Полный CSS с переменными для всех цветов
+   Все селекторы из твоего исходного файла включены и цвета вынесены в переменные
+*/
+
+:root {
+    /* Цвета */
+    --color-bg: #f5f5f7;
+    --color-text: #000000;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-accent: #F8303E;
+    --color-dark-gray: #2b2b2b;
+    --color-gray-light: #d6d6d6;
+    --color-gray-medium: #e2e2e2;
+    --color-gray-text: #1a1a1a;
+
+    /* Выделение */
+    --selection-bg: var(--color-accent);
+    --selection-text: var(--color-white);
+
+    /* Бордеры */
+    --border-color: var(--color-black);
+    --footer-border-color: var(--color-black);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 10px 0px;
+    background-color: var(--color-bg);
+    font-family: Roboto;
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Andika;
+    src: url(./fonts/Andika-Bold.ttf);
+}
+
+::selection{
+    background-color: var(--selection-bg); /* цвет фона при выделении */
+    color: var(--selection-text);   
+}
+
+::-webkit-selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+.navBar{
+    flex: 0;
+    padding: 0px 100px;
+    display: flex;
+    top: 5px;
+    border-top: var(--border-color) 1px solid;
+    border-bottom: var(--border-color) 1px solid;
+    background-color: var(--color-white);
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    width: auto;
+    flex: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.logoImg{
+    width: 50%;
+    margin-right: 10px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.navItems{
+    padding: 0px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 100ms ease-in;
+}
+
+a:active{
+    color: var(--color-black);
+}
+
+a:visited{
+    color: var(--color-black);
+}
+
+.navItems:hover{
+    color: var(--color-accent);
+}
+
+.contactBtn{
+    padding: 0px 20px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    transition: 150ms ease-in;
+}
+
+.contactBtn:hover{
+    background-color: var(--color-dark-gray);
+    cursor: pointer;
+}
+
+.contactBtnDiv{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.themeToggle{
+    background-color: var(--color-accent);
+    border: none;
+    transition: 150ms ease-in;
+    margin: 0px 10px;
+}
+
+.container{
+    padding: 0px 100px;
+    margin: 0px 0px 50px 0px;
+}
+
+.header{
+    width: 45%;
+    margin: 150px 0px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.webDesignerDiv{
+    width: fit-content;
+    background-color: var(--color-white);
+    padding: 5px;
+    font-size: 12px;
+}
+
+.webDesigner{
+    margin: 0px;
+}
+
+.title{
+    /* пустой селектор оставлен для возможных стилей */
+}
+
+.subTitle{
+    line-height: 150%;
+}
+
+.skilParametrs{
+    margin: 5px 0px;
+}
+
+.shary{
+    font-size: 64px;
+    margin: 0px;
+}
+
+.vlad{
+    font-size: 64px;
+    color: var(--color-accent);
+    margin: 0px;
+}
+
+.download{
+    padding: 15px 30px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    transition: 150ms ease-in;
+}
+
+.download:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.talkAbout{
+    margin: 0px 20px 0px 0px;
+    padding: 15px 30px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    transition: 150ms ease-in;
+}
+
+.talkAbout:hover{
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.myWork{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titlePortfolio{
+    width: fit-content;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+.whatIDo{
+    margin: 0px;
+    width: fit-content;
+    font-size: 12px;
+    color: var(--color-gray-text);
+}
+
+.textMyWork{
+    margin: 0px;
+    width: fit-content;
+    font-size: 48px;
+    color: var(--color-accent);
+}
+
+.descriptionPortfolio{
+    width: 30%;
+    line-height: 150%;
+}
+
+.firstProject{
+    display: flex;
+}
+
+.firstProjectImg{
+    width: fit-content;
+}
+
+.descriptionFirstProject{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descriptionContentFirstProject{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year{
+    font-size: 32px;
+}
+
+.line{
+    width: 120px;
+}
+
+hr{
+    border: var(--color-gray-light) 0.5px solid;
+}
+
+.name{
+    font-size: 32px;
+    color: var(--color-accent);
+}
+
+.description{
+    /* пустой селектор для контента */
+}
+
+.yearP{
+    margin: 0px;
+}
+
+.nameP{
+    margin: 0px;
+}
+
+.secondProject{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.process{
+    display: flex;
+    background-color: var(--color-white);
+    padding: 40px 100px;
+    justify-content: space-between;
+}
+
+.processTitles{
+    width: 30%;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.processTitlesDiv{
+    display: flex;
+}
+
+.listDiv{
+    width: fit-content;
+    height: fit-content;
+}
+
+.listElement {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* расстояние между числом и текстом */
+    border-bottom: var(--color-gray-light) 1px solid;
+    margin: 20px 0px 20px 0px;
+}
+
+.number {
+    margin: 0px;
+    color: var(--color-gray-medium);
+    font-size: 64px;
+}
+
+.listTitles {
+    display: inline-block; /* блок подстраивается под контент */
+    width: fit-content;
+}
+
+.listTitle {
+    color: var(--color-black);
+    font-size: 32px;
+    margin: 10px 0px 20px 0px;
+}
+
+.listSubTitle {
+    margin: 20px 0px;
+    color: var(--color-gray-text);
+    max-width: 400px; /* ограничь по желанию, чтобы не растягивался слишком */
+    line-height: 150%;
+}
+
+.commentsContainer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentsDiv{
+    width: 45%;
+}
+
+.commentsYear{
+    border-top: var(--color-accent) 1px solid;
+    color: var(--color-gray-light);
+}
+
+.commentsText{
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.commentsNameCompany{
+    /* пустой селектор для имени/компании */
+}
+
+.contactTitle{
+    /* font-size: 24px; */
+    margin: 0px;
+}
+
+.contactInfo{
+    font-size: 24px;
+    transition: 100ms ease-in;
+}
+
+.contactInfo:hover{
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.contactContainer{
+    padding: 0px 0px 20px 0px;
+}
+
+footer{
+    background-color: var(--color-white);
+    display: flex;
+    padding: 0px 100px;
+    margin: 50px 0px 50px 0px;
+    border: var(--footer-border-color) 1px solid;
+    justify-content: space-between;
+}
+
+.footerNav{
+    color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footerLogo{
+    width: auto;
+    flex: 0;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.footerNavItems{
+    color: var(--color-black);
+    margin: 0px 10px;
+    text-decoration: none;
+    transition: 100ms ease-in;
+}
+
+.footerNavItems:hover{
+    color: var(--color-accent);
+}
+
+.copy-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  font-family: Roboto, sans-serif;
+}
+
+/* класс, который активирует анимацию */
+.copy-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Пример: переопределение переменных для тёмной темы ===
+   (если захочешь включить тёмную тему — достаточно добавить class="dark" на <body>)
+*/
+body.dark {
+    --color-bg: #121212;
+    --color-text: #ffffff;
+    --color-white: #1e1e1e;
+    --color-black: #ffffff;
+    --color-accent: #F8303E; /* можно заменить при желании */
+    --color-dark-gray: #333333;
+    --color-gray-light: #444444;
+    --color-gray-medium: #666666;
+    --color-gray-text: #cccccc;
+    --selection-bg: var(--color-accent);
+    --selection-text: var(--color-white);
+    --border-color: #444444;
+    --footer-border-color: #444444;
+}
+
+
+
+/* ===================== */
+/* 📱 АДАПТИВ + БУРГЕР-МЕНЮ (исправленная версия) */
+/* ===================== */
+
+/* Иконка бургера */
+.burger {
+  display: none;
+  width: 25px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.burger div {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-black);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+/* Состояние "открыто" */
+.burger.active div:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+.burger.active div:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Выпадающее меню */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--border-color);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+  z-index: 1000;
+  animation: slideDown 0.25s ease forwards;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-menu a {
+  padding: 14px 20px;
+  font-size: 16px;
+  color: var(--color-black);
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.mobile-menu a:hover {
+  color: var(--color-accent);
+}
+
+/* Затемнение фона при открытом меню */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Отключение прокрутки при активном меню */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ===================== */
+/* 📱 АДАПТИВ */
+/* ===================== */
+
+@media (max-width: 1024px) {
+  .container, .process, footer, .navBar {
+    padding: 0 40px;
+  }
+
+  .header {
+    width: 70%;
+  }
+
+  .vlad, .shary {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navigation {
+    display: none;
+  }
+
+  .contactBtnDiv {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    margin-top: 120px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .vlad, .shary {
+    font-size: 36px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .myWork {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .descriptionPortfolio {
+    width: 100%;
+  }
+
+  .firstProject, .secondProject {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+
+  .process {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .processTitles {
+    width: 100%;
+    position: static;
+    text-align: left;
+  }
+
+  .listDiv {
+    width: 100%;
+  }
+
+  .listElement {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .commentsContainer {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .commentsDiv {
+    width: 100%;
+  }
+
+  .contactsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .footerNav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Универсальное правило для изображений — чтобы они не выходили за контейнер */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ===================== */
+/* 🧩 ЛЕВОЕ ВЫРАВНИВАНИЕ (без вмешательства в justify-content) */
+/* ===================== */
+
+body, .header, .container, .process, .commentsContainer, .contactsDiv, footer, .myWork, .processTitles, .listDiv, .listElement {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+
+
+/* ===================== */
+/* 🪄 ФИКС: Отступ сверху у блока "Готовы сотрудничать?" при адаптиве */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .processTitles#progress {
+    margin-top: 60px !important;
+  }
+
+  @media (max-width: 480px) {
+    .processTitles#progress {
+      margin-top: 40px !important;
+    }
+  }
+}
+
+
+
+/* ===================== */
+/* 🧩 ФИКС: Кнопки в хедере тянутся на мобильных */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+
+
+/* ===================== */
+/* 🪄 ФИКС: Отступ сверху для всех блоков .processTitles на мобильных */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .processTitles {
+    margin-top: 60px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .processTitles {
+    margin-top: 40px !important;
+  }
+}
